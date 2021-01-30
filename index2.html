@@ -71,7 +71,7 @@
                     <p>Dzień dobry, nazywam się</p>
                     <h3>Patryk Zastawny</h3>
                     <p>Utworzyłem tą stronę internetową na potrzeby zaliczenia przedmiotu "Języki wysokiego poziomu w aplikacjach internetowych".</p>
-                    <p>Bardzo się potrarałem i przykułem uwagę do wszelkich szczegółów. W aplikacji można zmieniać tło strony jak również rodzaj w jaki ma być ona powtarzana. Dodałem skrypt, który zaczytuje aktualne informacje o sytuacji epidemiologicznej w Polsce. Zanim przejdziemy na stronę główną zamieściłem skrypt, który odlicza do końca sesji podstawowej w semestrze zimowym 2021 na uczelni PWSZ Elbląg. W secji filmów na Youtube działa skrypt, który po kliknięciu na obrazek uruchamia wideo Youtube.</p>
+                    <p>Bardzo się potrarałem i przykułem uwagę do wszelkich szczegółów. W aplikacji można zmieniać tło strony jak również rodzaj w jaki ma być ona powtarzana. Dodałem skrypt, który zaczytuje aktualne informacje o sytuacji epidemiologicznej w Polsce. Zanim przejdziemy na stronę główną zamieściłem skrypt, który odlicza do końca sesji podstawowej w semestrze zimowym 2021 na uczelni PWSZ Elbląg. W secji filmów na Youtube działa skrypt, który po kliknięciu na obrazek uruchamia wideo Youtube. Dodałem także kalendarz, do którego planuję nanosić własny plan zajęć.</p>
 
                   
 
@@ -137,6 +137,29 @@
             </div>
         </div>
     </section>
+
+       <section>
+        
+        <h2>Mój grafik</h2>
+
+        <div class="row">
+            
+            <div class="col-lg-12 col-md-12">
+                <div>
+<span class="month-year"></span>
+<table class="date_table table table-bordered table-striped">
+<tr>
+<th>Niedziela</th> <th>Poniedziałek</th> <th>Wtorek</th><th>Środa</th>
+<th>Czwartek</th> <th>Piątek</th> <th>Sobota</th>
+</tr>
+</table>
+<span class="prev-month btn btn-danger">Poprzedni miesiąc</span>
+<span class="next-month btn btn-danger">Następny miesiąc</span>
+<div class="alert alert-info output mt-3">Wybrana data: </div>
+</div>
+  </div>
+            </div>
+    </section>
     
     <section id="page-interests">
         
@@ -186,6 +209,7 @@
     <script src="js/loopcounter.js"></script>
     <script src="js/covid19stats.js"></script>
     <script src="js/youtube-overlay.js"></script>
+    <script src="js/osmanli_calendar.js"></script>
     <script>
      $(document).ready(function(){
         loopcounter('counter-class');
@@ -243,7 +267,16 @@ var configObject = {
 var videoBuild = new YoutubeOverlayModule(configObject);
   videoBuild.activateDeployment();
 
+  var start_date_dialog = osmanli_calendar
+$('.prev-month').click(function () {start_date_dialog.pre_month()});
+$('.next-month').click(function () {start_date_dialog.next_month()});
+
+start_date_dialog.init();
+start_date_dialog.ON_SELECT_FUNC = function(){
+  $('.output').html(osmanli_calendar.SELECT_DATE);
+}
 </script>
+
 
 
 
