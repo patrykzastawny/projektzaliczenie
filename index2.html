@@ -7,6 +7,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" >
     <link rel="stylesheet" href="css/flip-clock.css" />
+    <link href="css/covid19.css" rel="stylesheet">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
+
+
 </head>
 
 <body>
@@ -42,8 +47,12 @@
         </div>
       </nav>
 
-        <section id="countdown"> 
-           
+        <section> 
+           <div>
+            <h2 class="mb-5 text-center">COVID-19 w Polsce</h2>
+            <div id="covid-widget" class="mt-5">
+            </div>    
+            </div>
         </section>
 
       <section id="page-about-me">
@@ -137,12 +146,24 @@
 	<script src="js/script.js"></script>
     <script src="js/flip-clock.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="./js/loopcounter.js"></script>
+    <script src="js/loopcounter.js"></script>
+    <script src="js/covid19stats.js"></script>
     <script type="text/javascript">
      $(document).ready(function(){
         loopcounter('counter-class');
     });
+
+       $.covid19stats({
+  element: "#covid-widget", // Target element ID
+  countryCode: "PL", // ISO Country Code (get the list here : https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+  showImg: true, // True or false to show the left covid image
+  showCases: true, // True or false to show the "cases" stat
+  showDeaths: true, // True or false to show the "deaths" stat
+  showRecovered: false, // True or false to show the "recovered" stat
+  showRightLabel: true // True or false to show the "right label"
+});
 </script>
+
 
 
 </body>
