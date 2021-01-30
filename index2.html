@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patryk Zastawny</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/flip-clock.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="">Aplikacja służąca do zmiany tapety</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li>
+                <div class="form-group form-group-selector">
+                    <select id="select-wallpaper" class="form-control">
+                        <option disabled selected value>-- wybierz tło stronki -- </option>
+                    </select>
+                </div>
+            </li>
+
+            <li>
+                <div class="form-group form-group-selector">
+                    <select id="select-repeat" class="form-control">
+                        <option disabled selected value> -- wybierz powtarzanie obrazka -- </option>
+                        <option value="repeat">wszędzie</option>
+                        <option value="no-repeat">bez powtarzania</option>
+                        <option value="space">z odstępami</option>
+                        <option value="repeat-x">w poziomie</option>
+                        <option value="repeat-y">w pionie</option>
+                        <option value="round">zaokrąglone</option>
+                    </select>
+                </div>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+
+        <section id="countdown"> 
+           
+        </section>
+
+      <section id="page-about-me">
+
+        <h2>O mnie</h2>
+
+        <div class="row home_bg">
+            <div class="col-lg-4 col-sm-4 col-xs-12">
+                <img src="img/me.jpg" class="img-fluid img-thumbnail" alt="moje zdjęcie">
+            </div>
+            <div class="col-lg-4 col-sm-4 col-xs-12">
+                    <p>Dzień dobry, nazywam się</p>
+                    <h3>Patryk Zastawny</h3>
+                    <p>Utworzyłem ta aplikację do zmiany tapety na stronie na zaliczenie przedmiotu.</p>
+                    <p>Bardzo się potrarałem i przykułem uwagę do wszelkich szczegółów. W aplikacji można zmieniać tło strony jak również rodzaj w jaki ma być ona powtarzana.</p>
+
+                  
+
+
+            </div>
+            <div class="col-lg-4 col-sm-4 col-xs-12">
+                
+                <div class="profile-info">
+                    <span class="th">Kto:</span>
+                    <span class="td">Patryk Zastawny</span>
+                </div>
+                <div class="profile-info">
+                    <span class="th">Data ur:</span>
+                    <span class="td">05 Wrz 1993</span>
+                </div>
+                <div class="profile-info">
+                    <span class="th">Adres:</span>
+                    <span class="td">ul. Studzienna 30/12<br>83-200 Elbląg</span>
+                </div>
+                <div class="profile-info">
+                    <span class="th">Tel:</span>
+                    <span class="td">+48 508 582 894</span>
+                </div>
+                <div class="profile-info h_email">
+                    <span class="th">E-mail:</span>
+                    <span class="td"><a href="mailto:patrykz@o2.pl">patrick.zastawny@gmail.com</a></span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="page-interests">
+        
+        <h2>Zainteresowania</h2>
+
+        <div class="row">
+            
+            <div class="col-lg-4 col-md-4">
+                <h3>Sport</h3>
+                <img src="img/sport.jpg" class="img-responsive img-frame" alt="sport">
+                <p>
+                    Sport był na drugim miejscu. W całym swoim życiu opuściłem wiele lekcji WF-u. 
+                    Ważniejsze dla mnie było nabycie innych umiejętności. Choćby takich jak programowanie w języku JS. Co praktykuję do dzisiaj.
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-md-4">
+                <h3>Programowanie</h3>
+                <img src="img/programowanie.jpg" class="img-responsive img-frame" alt="programowanie">
+                <p>
+                    Gdy miałem 9 lat dostałem swój pierwszy komputer na Mikołaja. 
+                    Kilka miesięcy później kolega pokazał mi swoją stronę internetową. 
+                    Pamiętam tylko, że były tam przechodzące napisy przy użyciu znaczników marquee. 
+                    Zainspirował mnie i w niedalekim czasie sam zrobiłem swoją pierwszą stronę internetową.
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-md-4">
+                <h3>Gry komputerowe</h3>
+                <img src="img/gry-komputerowe.jpg" class="img-responsive img-frame" alt="gry komputerowe">
+                <p>
+                    Nieodłączny element mojego życia. Fascynacja grami: Call of Duty, Far Cry, Need for Speed, TrackMania, WatchDogs, Grand Theft Auto, Forge of Empire, Atheltics Mania etc
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        Copyright © by Patryk Zastawny
+    </footer>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/script.js"></script>
+    <script src="js/flip-clock.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="./js/loopcounter.js"></script>
+    <script type="text/javascript">
+     $(document).ready(function(){
+        loopcounter('counter-class');
+    });
+</script>
+
+
+</body>
+
+</html>
