@@ -79,6 +79,7 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="js/loopcounter.js"></script>
+<script src="js/jquery.cookieMessage.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		loopcounter('counter-class');
@@ -92,6 +93,12 @@
 
 	     alert("Za 5 sekund zostaniesz przekierowany do strony głównej. Zamknij to okno, aby zobaczyć ile czasu pozostało do końca zimowej sesji egzaminacyjnej.");
 
+$.cookieMessage({
+    'mainMessage': 'Ta strona wcale nie używa cookie. Nie przejmuj się. Klikając w przycisk zgadzasz się i nie zgadzasz na nasze warunki. Jesli chcesz zdobyć więcej informacji nie musisz nigdzie wchodzić - bo nie ma więcej informacji. Niczym nie musisz się przejmować.',
+    'acceptButton': 'Czaję bazę!',
+    'fontSize': '16px',
+    'backgroundColor': '#222',
+});
 
 </script>
 

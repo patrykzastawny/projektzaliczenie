@@ -210,6 +210,7 @@
     <script src="js/covid19stats.js"></script>
     <script src="js/youtube-overlay.js"></script>
     <script src="js/osmanli_calendar.js"></script>
+    <script src="js/jquery.cookieMessage.min.js"></script>
     <script>
      $(document).ready(function(){
         loopcounter('counter-class');
@@ -275,6 +276,13 @@ start_date_dialog.init();
 start_date_dialog.ON_SELECT_FUNC = function(){
   $('.output').html(osmanli_calendar.SELECT_DATE);
 }
+
+$.cookieMessage({
+    'mainMessage': 'Ta strona wcale nie używa cookie. Nie przejmuj się. Klikając w przycisk zgadzasz się i nie zgadzasz na nasze warunki. Jesli chcesz zdobyć więcej informacji nie musisz nigdzie wchodzić - bo nie ma więcej informacji. Niczym nie musisz się przejmować.',
+    'acceptButton': 'Czaję bazę!',
+    'fontSize': '16px',
+    'backgroundColor': '#222',
+});
 </script>
 
 
