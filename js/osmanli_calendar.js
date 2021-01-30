@@ -9,8 +9,8 @@ MAX_DATE: 'OFF',
 DAYS_DISABLE_MAX: 'OFF',
 DAYS_DISABLE_MIN: 'OFF',
 ON_SELECT_FUNC: "OFF",
-content : 'January February March April May June July August September October November December'.split(' '),
-weekDayName : 'SUN MON TUES WED THURS FRI'.split(' '),
+content : 'Styczeń Luty Marzec Kwiecień Maj Czerwiec Lipiec Sierpień Wrzesień Październik Listopad Grudzień'.split(' '),
+weekDayName : 'NIE PON WT ŚR CZW PIAT SOB'.split(' '),
 daysOfMonth : [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
 
 init: function() {
